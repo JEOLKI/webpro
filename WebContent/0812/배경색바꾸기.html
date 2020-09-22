@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<!-- <style type="text/css">
+	#clear
+		display: none; 
+	}
+</style> -->
+
+<script type="text/javascript">
+	window.onload = function() {
+		
+		ok = document.querySelector("#ok");
+		clear = document.querySelector("#clear");
+		
+		clear.style.display = "none";
+		
+	}
+	
+	function proc1() {
+		
+		ok.style.display = "none";
+		clear.style.display = "inline";
+		
+		
+		a = setInterval(() => {
+			cr = Math.floor(Math.random()*255);
+			cg = Math.floor(Math.random()*255);
+			cb = Math.floor(Math.random()*255);
+			
+			document.body.style.backgroundColor = `rgb(${cr},${cg},${cb})`;
+			
+		}, 1000);
+	}
+	
+	function proc2() {
+		
+		ok.style.display = "inline";
+		clear.style.display = "none";
+		
+		clearInterval(a);
+		
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 1초마다 한번씩 배경색 바꾸기  </h3>
+		종료버튼 만들기
+		<br><br>
+		<input id="ok" type="button" value="확  인" onclick="proc1()">
+		<input id="clear" type="button" value="종  료" onclick="proc2()">
+		<br><br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

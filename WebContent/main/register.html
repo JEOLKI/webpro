@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WEB SHOP : 회원가입</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+	fieldset{
+		width:450px;
+	}
+
+	.la{
+		display : inline-block;
+ 		width: 130px; 
+	}
+	
+	.input{
+		width: 180px;
+	}
+	
+	.input1{
+		width : 180px;
+	}
+	
+	.input2{
+		width : 180px;
+		margin: 5px 7px 0px 2px;
+	}
+
+
+</style>
+
+</head>
+<body>
+
+
+	<form action="">
+		<fieldset>
+			<legend>회원정보입력</legend>
+			<label class="la">아이디</label>
+			<input type="text" name="id" class="input">
+			<input type="button" value="중복검사">
+			<br>
+			<label class="la">패스워드</label>
+			<input type="text" name="pass" class="input">
+			<br>
+			<label class="la">패스워드 확인</label>
+			<input type="text" name="passcheck" class="input">
+			<br>
+			<label class="la">이름</label>
+			<input type="text" name="name" class="input">
+			<br>
+			<label class="la">휴대폰번호</label>
+			<input type="text" name="hp" class="input">
+			<br>
+			<label class="la">이메일</label>
+			<input type="text" name="email" class="input">
+			<br>
+			<label class="la">생일</label>
+			<input type="date" name="bir" class="input">
+			<br>
+			<label class="la">홈페이지</label>
+			<input type="text" name="homepage" class="input">
+			<br>
+			<input type="radio" name="gender" class="input1">남성 <br>
+			<input type="radio" name="gender" class="input1">여성
+		</fieldset>
+		
+		<input type="submit" value="제출" class="input2">
+		<input type="reset" value="초기화" class="input2">
+		
+	</form>
+
+</body>
+</html>

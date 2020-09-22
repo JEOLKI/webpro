@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+
+
+window.onload = function() {
+	
+	// 랜덤 발생
+	rand = Math.floor(Math.random()*100+1);
+
+	count = 0;
+
+	values = "";
+	
+	result = document.querySelector("#result1");
+}
+	
+	function proc1() {
+		// 입력한 값 가져오기
+		inputvalue = document.getElementById('input').value;
+ 		
+		// 값 비교
+		if (rand == inputvalue) {
+			hint = "CORECT!!"
+			values += inputvalue + "&nbsp;";
+			count++;
+			
+			res = "랜덤값 : " + rand + "<br>";
+			res += "입력 값들 : "+ values + "<br>";
+			res += "횟수 : "+ count + "<br>";
+			
+			result.innerHTML = res;
+		} else if (rand > inputvalue) {
+			hint = "UP!"
+			values += inputvalue + "&nbsp;";
+			count++;
+			result.innerHTML = hint;
+		} else {
+			hint = "DOWN!"
+			values += inputvalue + "&nbsp;";
+			count++;
+			result.innerHTML = hint;
+		}
+	}
+
+	function proc2() {
+		arr = ["가위", "바위", "보"];
+		
+		// 랜덤 발생 0~2
+		random = Math.floor(Math.random()*arr.length);
+		
+		// 컴퓨터의 가위 바위 보 가 결정 됨
+		com = arr[random];
+		
+		user = prompt("가위 바위 보를 입력하세요");
+		
+		res = "컴퓨터 : " + com + "<br>";
+		res += "사용자 : " + user + "<br>";
+		
+		if (com == user) {
+			res += "비겼다."
+		} else if (com == "가위" && user == "바위" 
+				|| com == "바위" && user == "보" 
+				|| com == "보" && user == "가위") {
+			res += "사용자가 이겼다."
+		} else {
+			res += "컴퓨터가 이겼다."
+		}
+		
+		document.querySelector('#result2').innerHTML = res;
+		
+	}
+	
+	function proc3() {
+		// 배열 선언 
+		lotto = [];
+			
+		while (lotto.length < 6) {
+			// 랜덤발생
+			random = Math.floor(Math.random()*45+1);
+			
+			// 배열에 같은값이 있는지 비교
+			idx = lotto.indexOf(random);
+		
+			// 없으면 배열에 저장
+			if(idx<0) lotto.push(random);
+		}
+		
+		res = "Lotto 번호 : " + lotto + " 입니다.";
+		
+		document.querySelector('#result3').innerHTML += res + "<br>";
+		
+		
+	}
+	
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 랜덤 수 맞추기  </h3>
+		1~100 사이의 랜덤을 발생한다 <br>
+		랜덤수를 맞춘다 <br>
+		힌트와 몇번만에 맞췄는지 체크 
+		<br><br>
+		<input type="text" id="input">
+		<input type="button" value="확  인" onclick="proc1()">
+		<br><br>
+		<div id="result1"></div>
+	</div>
+	
+	<div class="box">
+		<h3>2. 가위 바위 보 게임을 할 수 있는 프로그램을 작성하시오.</h3>
+		(단, 컴퓨터는 배열에 저장, 랜덤을 이용하고, 사용자는 prompt로 입력 받아서 처리)<br>
+		어느쪽이 이겼는지 결과를 출력
+		<br><br>
+		<input type="button" value="확  인" onclick="proc2()">
+		<br><br>
+		<div id="result2"></div>
+	</div>
+	
+	<div class="box">
+		<h3>3. 로또 번호를 생성하는 프로그램을 작성하시오.</h3>
+		(1번 ~ 45번 중 6개의 번호를 추첨) <br>
+		중복이 없어야 한다.
+		<br><br>
+		<input type="button" value="확  인" onclick="proc3()">
+		<br><br>
+		<div id="result3"></div>
+	</div>
+	
+</body>
+</html>

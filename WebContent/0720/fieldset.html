@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+*{
+	color : red;
+}
+	fieldset {
+		width: 50%;
+	}
+
+	label {
+		display : inline-block;
+		width : 100px;
+		height: 30px;
+	}
+	
+	#fieldset1{
+		width : 40px;
+		border: 2px solid blue;
+		padding: 30px;
+	}
+	
+	#fieldset2{
+		width : 400px;
+		border: 2px solid blue;
+		padding: 30px;
+	}
+	
+	.la{
+		margin : 5px;
+	}
+
+</style>
+</head>
+<body>
+<pre style="background: skyblue;">
+
+	**작성팁
+	fieldset : 입력 항목들의 그룹핑
+	legend : fieldset의 제목
+	label : 일반 문자, 문자의 길이를 같게 하기 위해서 사용
+	  -label 요소가 인라인 요소이기때문에
+	  display : inline-block 의 형태로 스타일을 지정해야만
+	 			 가로 세로 길이를 설정 할 수 있다.
+
+
+</pre>
+	<form action="">
+		<fieldset>
+		<legend>인적사항</legend>
+		
+		<label>이름</label>
+		<input type="text"> <br>
+		
+		<label>전화번호</label>
+		<input type="text"> <br>
+		</fieldset>
+		
+		<br>
+		
+		<fieldset>
+		<legend>경력사항</legend>
+		<label>이메일</label>
+		<input type="text"> <br>
+		<label>생일</label>
+		<input type="date"> <br>
+		</fieldset>
+	</form>
+	
+	<hr color="blue">
+	
+	<h2>이메일 전송화면</h2>
+	
+	<form>
+	<fieldset id="fieldset1">
+	
+	<label>이름</label>
+	<input type="text" name="name"> <br>
+	<label>이메일</label>
+	<input type="text" name="email"> <br>
+	<label>내용</label> <br>
+	<textarea rows="10" cols="50"></textarea> <br>  
+	<input type="submit" value="전송">
+	<input type="reset" value="재설정">
+	
+	</fieldset>	
+	</form>
+	
+	<br>
+	
+	<h2>회원가입화면</h2>
+	<form>
+	<fieldset id="fieldset2">
+	<label class="la">이름</label> <input type="text" name="name"> <br> 
+	<label class="la">주소</label> <input type="text" name="addr"> <br>
+	<label class="la">이메일</label> <input type="text" name="email"> <br>
+	<input type="radio" value="male" class="la"> Male <br>
+	<input type="radio" value="fmale" class="la"> Fmale <br>
+	<input type="submit" value="Send">
+	<input type="reset" value="원래대로">
+	
+	</fieldset>
+	</form>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+	function proc1() {
+		alert("hello ~~");
+		let res = "";
+		for (i = 0; i < 5; i++) {
+			rd = Math.floor(Math.random()*100+1); // 정수로 변경
+			res += rd + ", ";
+		}
+		a = res.lastIndexOf(",");
+		res = res.substring(0,a) +"<br>"
+		document.querySelector('#result1').innerHTML += res; // += 하면 누적되는것
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 랜덤 5개 발생</h3>
+		- 1 ~ 100사이의 수 
+		<br><br>
+		<input type="button" value="확  인" onclick="proc1()">
+		<br><br>
+		<h2>실행결과</h2>
+		<div id="result1"></div>
+	</div>
+
+</body>
+</html>

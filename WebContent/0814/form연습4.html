@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+	form{ 
+		text-align: center;
+	}
+	
+	span {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	
+</style>
+
+<script type="text/javascript">
+
+	window.onload = function() {
+		form = document.ff;
+	}
+	function go() {
+		idx = form.sel.selectedIndex;
+		
+		val = form.sel.options[idx].value;
+		
+		res = "";
+		for (var i = 1; i < 10; i++) {
+			res += val + " * " + i +" = " + val*i + "<br>";
+		}
+		
+		document.querySelector('#result1').innerHTML = res;
+		
+	}
+
+
+</script>
+
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>form 연습4</h3>
+		<form name="ff">
+			<select name="sel">
+				<option value="2"> 2 단 </option>
+				<option value="3"> 3 단 </option>
+				<option value="4"> 4 단 </option>
+				<option value="5"> 5 단 </option>
+				<option value="6"> 6 단 </option>
+				<option value="7"> 7 단 </option>
+				<option value="8"> 8 단 </option>
+				<option value="9"> 9 단 </option>
+			</select>
+			<input type="button" value="출 력" onclick="go()" > <br><br>
+			<span>결과 출력</span>
+			<br><br>
+			<div id="result1"></div>
+		</form>
+
+	</div>
+</body>
+</html>

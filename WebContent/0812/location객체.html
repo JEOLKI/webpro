@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+	function proc1() {
+		
+		url = "http://localhost/webpro/0811/input.html";
+		res = "href = " + location.href + "<br>";
+		res += "protocol = " + location.protocol + "<br>";
+		res += "port = " + location.port + "<br>";
+		res += "host = " + location.host + "<br>";
+		res += "hostname = " + location.hostname + "<br>";
+		res += "pathname = " + location.pathname + "<br>";
+		
+		document.getElementById('result1').innerHTML = res;
+		
+	}
+	
+	function proc2() {
+		location.href = "test.jsp";
+	}
+	
+	function goPage() {
+		location.href="test.jsp?id=a001"
+	}
+	
+	function goPagePost() {
+		//form 검색 - id를 이용
+		document.getElementById("ff");
+	
+		//form 검색 - name을 이용
+		//document.getElementsByName("ff")
+		//document.ff 
+		document.getElementsByName("ff")[0];
+		document.ff.action = "testpost.jsp";
+		document.ff.method = "post";
+		document.ff.submit();
+	}
+	
+	function goReplace(url) {
+		location.replace(url);
+	}
+	
+	function goReload() {
+		//문자열 배열을 생성, 랜덤을 이용해서  문자열중 하나를 출력한다.
+		str = ["Hello~!", "happy", "javascript", "jQuery", "html", "css"];
+		// str[0] ~ str[5] 중 랜덤선택
+		ran = Math.floor(Math.random()*str.length);
+		
+		res = str[ran];
+		
+		result2 = document.querySelector('#result2');
+		result2.style.fontSize = "5em";
+		result2.style.color = "blue"; 
+		result2.innerHTML = res;
+		//출력후 원래 페이지로 다시 로드한다.
+		
+		setTimeout(() => {
+			location.reload();
+		}, 1000);
+		
+	}
+	
+
+    for (var key in navigator) {
+        value = navigator[key];
+        document.write(key + ": " + value + "<br>");
+    }
+
+
+
+
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. url정보얻기  </h3>
+		href : 전체url <br>
+		port : 80기본 웹폰트로 생략 <br>
+		host : URL 중에서 hostname과 port를 반환 	<br>
+		hostname : URL 중에서 hostname을 반환 <br>
+		pathname : URL 중에서 경로(path)를 반환<br>
+		
+		<br><br>
+		<input type="button" value="확  인" onclick="proc1()">
+		<br><br>
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<h3>2. location객체 이용 </h3>
+		<br>
+		- 자동으로 특정 페이지 (test.jsp) 이동할 때 사용 : 
+		<input type="button" value="페이지 이동" onclick="proc2()">
+		<br>
+		- a태그 이용 a href 속성값으로  javascript 함수를 호출하도록 설정 한다 <br>
+		- a href="javascript:함수명"
+		<a href="javascript:goPage()" > 공지사항 목록 </a> 
+		<br>
+		- 이벤트 사용 (get 방식) : 		
+		<input type="button" value="공지사항 목록" onclick="goPage()">
+		<br>
+		- 이벤트 사용 (post 방식)	:
+		<form name="ff" id="ff"> <!-- action="aa.jsp" method="post" --> 	
+			<input type="hidden" value="korea" name="id">
+			<input type="button" value="공지사항 목록" onclick="goPagePost()">
+		</form>
+		<br>
+		- 새로운 문서로 대체 (replace(url))	: 원래 페이지로 돌아 올수 없다. 	<br>
+		<input type="button" value="공지사항 목록" onclick="goReplace('test.jsp')">
+		<br>
+		- 현재 문서를 다시 로드	: 	
+		<input type="button" value="페이지 재호출" onclick="goReload()">
+		<br>
+		<div id="result2"></div>
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

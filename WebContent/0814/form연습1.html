@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+
+	#dan{
+		width: 30px;
+	}
+
+
+</style>
+
+<script type="text/javascript">
+
+	function print() {
+		
+		vdan = document.form1.dan.value;
+		
+		res = vdan +"단 \n\n";
+		
+		for (var i = 1; i < 10; i++) {
+			res += vdan + " * " + i +" = " + vdan*i + "\n";
+		}
+		
+		document.form1.area.value = res;
+		
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>form 연습1</h3>
+		<form name="form1">
+			<input type="text" name="dan" id="dan"> 단 
+			<input type="button" value="출 력" onclick="print()">
+			<br><br>
+			<textarea rows="20" cols="20" name="area"></textarea>		
+		
+		
+		</form>
+		
+		
+	</div>
+</body>
+</html>

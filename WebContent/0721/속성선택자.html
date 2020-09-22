@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style type="text/css">
+	
+	p{
+		font-size: 1.5em;
+	}
+	
+	p[class=pp]{
+		color: blue;
+	}
+	
+	span[class=pp]{
+		font-size: 2.0em;
+		font-weight: bold;
+	}
+	
+	strong{
+		font-size:  1.4em;
+	
+	}
+	
+	p[id=p4]{
+		background-color: #f1d1e1;
+	}
+	
+	p[title=무궁화1]{
+		border : 3px solid green;
+	}
+	
+	p[title]{
+		font-style: italic;
+	}
+	
+	p[id]{
+		text-align: center;
+		text-shadow: 20px 10px 5px blue; /* x좌표 y좌표 선명도 색 */
+	}
+
+
+</style>
+</head>
+<body>
+	<div>
+<pre>
+	
+	**작성팁
+	- [속성] 관련 선택
+	<strong>.pp</strong>			=> 클래스가 pp인것
+	<strong>p.pp</strong>			=> p중 클래스가 pp인것
+	<strong>span.pp</strong>		=> span중 클래스가 pp인것
+			
+	<strong>p[class=pp]</strong>	=> p중 클래스가 pp인것  : color: blue;
+	<strong>span[class=pp]</strong>	=> span중 클래스가 pp인것  : font-size: 2.0em; font-weight: bold;
+			
+	<strong>#p4</strong>			=> id가 p4인것
+	<strong>p[id]</strong>			=> p중에서 id가 있는것  : text-align: center;
+	<strong>p[id=p4]</strong>		=> p중 id가 p4인것  : background-color: #f1d1e1;
+	
+	<strong>p[title]</strong>		=> 타이틀이 있는것 전부  : font-style: italic;
+	<strong>p[title=무궁화1]</strong>	=> p중 title이 무궁화1인것  : 3px solid green;
+	<strong>p[title=무궁화2]</strong>	=> p중 title이 무궁화2인것
+	
+	- 글자의 그림자
+	text-shadow: 20px(x좌표) 10px(y좌표) 5px(선명도, 숫자가 커질수록 흐려진다.) blue(그림자 색);
+			
+			
+</pre>
+		
+		<!-- title => 마우스 올려놓았을때 뜨는것 -->
+		<p title="무궁화1"  id="p1">무궁화 꽃이 피었습니다.</p> 
+		<p class="pp">무궁화 꽃이 피었습니다. </p> 
+		<p title="무궁화2" class="pp">무궁화 꽃이 피었습니다.</p> 
+		<p id="p4">무궁화 꽃이 피었습니다.</p> 
+		<p class="pp2">무궁화 꽃이 피었습니다.</p> 
+	
+		<span class="pp">사과</span>
+		<span>복숭아</span>
+		<span>수박</span>
+	
+	
+	</div>
+</body>
+</html>

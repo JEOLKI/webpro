@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WEB SHOP : 쇼핑카트</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+
+	th{
+		text-align: center;
+	}
+	
+	td{
+		text-align: center;
+		padding: 1px 10px;
+	}
+	
+	table {
+		border-collapse: collapse;
+	}
+	
+	.sum{
+		width: 60px;
+	}
+	
+	.input{
+		margin-top: 3px;
+		margin-left: 4px;
+	}
+	
+	caption {
+		color: red;
+		text-decoration: underline;
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function add(){
+		// 입력한 값 가져오기 - get
+		xvalue = document.getElementById('price1').value;
+		yvalue = document.getElementById('count1').value;
+		xval = parseInt(xvalue);
+		yval = parseInt(yvalue);
+		xysum = xval * yval;
+		document.getElementById('sum1').value = xysum;
+		
+		
+		xvalue = document.getElementById('price2').value;
+		yvalue = document.getElementById('count2').value;
+		xval = parseInt(xvalue);
+		yval = parseInt(yvalue);
+		xysum = xval * yval;
+		document.getElementById('sum2').value = xysum;
+		
+		
+		xvalue = document.getElementById('price3').value;
+		yvalue = document.getElementById('count3').value;
+		xval = parseInt(xvalue);
+		yval = parseInt(yvalue);
+		xysum = xval * yval;
+		document.getElementById('sum3').value = xysum;
+		
+		
+		xvalue = document.getElementById('price4').value;
+		yvalue = document.getElementById('count4').value;
+		xval = parseInt(xvalue);
+		yval = parseInt(yvalue);
+		xysum = xval * yval;
+		document.getElementById('sum4').value = xysum;
+	}
+</script>
+
+
+</head>
+
+
+<body>
+	<form action="">
+	<table border="1">
+		<caption>Shopping Cart</caption>	
+		<tr>
+			<th>품목</th>
+			<th>가격</th>
+			<th>수량</th>
+			<th>합계</th>
+		</tr>
+
+		<tr>
+			<td>컴퓨터 세트</td>
+			<td>2,000,000원  <input type="hidden" id="price1" name="price" value="2000000"></td>
+			<td><input type="number" min="0"  id="count1" value="0" step="1" name="count" class="count"></td>
+			<td><input type="text" name="sum" id="sum1"  value="0" class="sum"></td>
+		</tr>
+		
+		<tr>
+			<td>티셔츠</td>
+			<td>50,000원  <input type="hidden" id="price2" name="price" value="50000"></td>
+			<td><input type="number" min="0"  id="count2" step="1" name="count" value="0" class="count"></td>
+			<td><input type="text" name="sum" id="sum2" value="0" class="sum"></td>
+		</tr>
+		
+		<tr>
+			<td>음악파일</td>
+			<td>1,000원   <input type="hidden" id="price3" name="price" value="1000"></td>
+			<td><input type="number" min="0"  id="count3" step="1" name="count" value="0" class="count"></td>
+			<td><input type="text" name="sum" id="sum3" value="0" class="sum"></td>
+		</tr>
+		
+		<tr>
+			<td>영화파일</td>
+			<td>5,000원   <input type="hidden" id="price4" name="price" value="5000"></td>
+			<td><input type="number" min="0" id="count4" step="1" name="count" value="0" class="count"></td>
+			<td><input type="text" name="sum" id="sum4" value="0" class="sum"></td>
+		</tr>
+
+	</table>
+	
+	<input type="button" value="계산" class="input" onclick="add()">
+	<input type="submit" value="구매" class="input">
+	<input type="reset" value="초기화" class="input"> 
+	
+	</form>
+	<br>
+	<a href="computer.html">Back to Home</a>
+
+
+</body>
+</html>

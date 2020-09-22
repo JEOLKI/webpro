@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 50px;
+		background: yellow;
+		margin: 10px;
+		padding: 10px;
+	}
+	
+	#d2{
+		background: skyblue;
+		position: relative; /* 상대적인 위치  1번박스 기준 */
+		top: 100px; /* 100px 만큼 내려옴  */
+	}
+
+	#d3{
+		background: cyan;
+		position: absolute; /* 윈도우창 최상단을 기준 */
+		top: 500px;
+	}
+
+	#d4{
+		background: orange;
+	}
+	
+	#fix{
+		position: fixed; /* 스크롤을 움직여도 위치가 고정되어있다. */
+		right: 30px; /* 윈도우창 오른쪽을 기준으로 */
+	}
+	
+</style>
+
+
+</head>
+<body>
+	<div id="d1">1</div>
+	<div id="d2">2</div>
+	<div id="d3">3</div>
+	<div id="d4">4</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div id="fix">4</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+
+</body>
+</html>

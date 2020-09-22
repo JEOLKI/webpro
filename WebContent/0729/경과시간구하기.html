@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+
+	function proc1() {
+		today = new Date();
+		birthday = new Date(1994, 3-1, 5);
+		
+		times = today.getTime() - birthday.getTime();
+		
+		res = "생일 : " + birthday.toLocaleDateString() + "<br>";
+		res += "살아온 millisec : " + times + "<br>";
+		res += "살아온 second : " + times/1000 + "<br>";
+		res += "살아온 min : " + times/(1000*60) + "<br>";
+		res += "살아온 hour : " + times/(1000*60*60) + "<br>";
+		res += "살아온 day : " + times/(1000*60*60*24) + "<br>";
+		res += "살아온 month : " + times/(1000*60*60*24*30) + "<br>";
+		res += "살아온 year : " + times/(1000*60*60*24*30*12) + "<br>";
+		
+		
+	
+		document.getElementById('result1').innerHTML = res;
+	
+	}
+	
+	function proc2() {
+		// 오늘 날짜 생성
+		today = new Date();
+		
+		// 오늘의 millisec + 100일의 millsec
+		times = today.getTime() + 100*24*60*60*1000;
+		
+		// 새로운 Date객체 생성 
+		day = new Date(times);
+		
+		res = "100일 후 : " + day.toLocaleDateString() + "<br>";
+	
+		document.getElementById('result2').innerHTML = res;
+	
+	}
+
+	function proc3() {
+		// 오늘 날짜 생성
+		today = new Date();
+		
+		christmas = new Date("2020.12.25");
+		
+		times = christmas.getTime() - today.getTime();
+	
+		res = "크리스 마스까지 남은일수 : " + Math.floor(times/(1000*60*60*24)) + "<br>";
+	
+		document.getElementById('result3').innerHTML = res;
+	
+	}
+
+</script>
+
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 경과시간</h3>
+		- 태어난 날로 부터 현째까지 날 수 구하기 <br>
+		birthday = new Date("태어난날"); <br>
+		today = new Date() : 현재 오늘 날짜
+		<br><br>
+		<input type="button" value="확  인" onclick="proc1()">
+		<br><br>
+		<div id="result1"></div>
+	</div>
+	
+	<div class="box">
+		<h3>2. 경과시간</h3>
+		- 오늘이 1일일때 100일후 구하기<br>
+		- today = new Date() <br>
+		- 100일의 millesec 값 구하기 <br>
+		- today.getTime() + 100일의 millesec
+		<br><br>
+		<input type="button" value="확  인" onclick="proc2()">
+		<br><br>
+		<div id="result2"></div>
+	</div>
+	
+	<div class="box">
+		<h3>3. 경과시간</h3>
+		- 크리스 마스 까지 남은 날 수 구하기
+		<br><br>
+		<input type="button" value="확  인" onclick="proc3()">
+		<br><br>
+		<div id="result3"></div>
+	</div>
+	
+</body>
+</html>

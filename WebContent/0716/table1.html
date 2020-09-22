@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style>
+	table#table1{
+		border : 3px solid skyblue;
+		border-collapse: collapse; 
+		margin: 10px;
+	}
+	
+	#table2{
+		border : 3px dashed blue;
+		border-collapse: separate; 
+		margin: 10px;
+	}
+	
+	#table3{
+		border : 3px dotted #FFE400;
+		border-collapse: collapse; 
+		margin: 10px;
+	}
+	
+	table#table1 th{
+		height : 50px;
+	}
+	
+	#table1 td{
+		width : 200px;
+		height : 40px;
+		text-align : center;
+	}
+	
+	#table1 #tr1{
+		background: #D4F4FA;
+	}
+	
+	#table2 th{
+		height: 60px;
+	}
+	
+	#table2 td{
+		width : 300px;
+		height: 30px;
+		text-align: center;
+	}
+
+	#table3 th{
+		height: 30px;
+	}
+	
+	#table3 td{
+		width : 500px;
+		height: 20px;
+		text-align: center;
+	}
+	
+	#tr2{
+		background: #DAD9FF;
+	}
+
+	#tr3{
+		/* background: #FAF4C0; */
+		background: rgba(255,255,100, 0.3);
+	}
+</style>
+
+</head>
+<body>
+<pre>
+	**작성팁
+	- table : 표형태의 데이터를 표시
+	  - tr(row) : 행, 줄
+	  - td(data) : 열, 칸
+	  - th(header) : td대신 제목 표시
+	
+	- 스타일
+	  - table : border, border=collapse
+	  - td : width, height, text-align
+	  - tr : background
+	  - th : width, height
+
+</pre>
+
+<table id="table1" border="1"> <!-- 0이거나(안주거나) 1만 줄수 있다 -->
+	<tr id="tr1">
+		<th>이름</th>
+		<th>주소</th>
+		<th>전화번호</th>
+	</tr>
+	
+	<tr>
+		<td>홍길동</td>
+		<td>대전</td>
+		<td>010-1234-1234</td>
+	</tr>
+	
+	<tr>
+		<td>개나리</td>
+		<td>서울</td>
+		<td>010-5678-5678</td>
+	</tr>
+	
+	<tr>
+		<td>진달래</td>
+		<td>부산</td>
+		<td>010-9876-9876</td>
+	</tr>
+	
+	
+</table>
+
+<table id="table2" border="1"> <!-- 0이거나(안주거나) 1만 줄수 있다 -->
+	<tr id="tr2">
+		<th>이름</th>
+		<th>주소</th>
+		<th>전화번호</th>
+	</tr>
+	
+	<tr>
+		<td>홍길동</td>
+		<td>대전</td>
+		<td>010-1234-1234</td>
+	</tr>
+	
+	<tr>
+		<td>개나리</td>
+		<td>서울</td>
+		<td>010-5678-5678</td>
+	</tr>
+	
+	<tr>
+		<td>진달래</td>
+		<td>부산</td>
+		<td>010-9876-9876</td>
+	</tr>
+	
+	
+</table>
+
+<table id="table3" border="1"> <!-- 0이거나(안주거나) 1만 줄수 있다 -->
+	<tr id="tr3">
+		<th>이름</th>
+		<th>주소</th>
+		<th>전화번호</th>
+	</tr>
+	
+	<tr>
+		<td>홍길동</td>
+		<td>대전</td>
+		<td>010-1234-1234</td>
+	</tr>
+	
+	<tr>
+		<td>개나리</td>
+		<td>서울</td>
+		<td>010-5678-5678</td>
+	</tr>
+	
+	<tr>
+		<td>진달래</td>
+		<td>부산</td>
+		<td>010-9876-9876</td>
+	</tr>
+	
+	
+</table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	table{
+		border : 3px solid blue;
+	}
+
+	td{
+		width : 100px;
+		height: 70px;
+	}
+	
+	#tab2{
+		border: 2px dashed red;
+		margin: : 20px;
+		border-collapse: collapse;
+	}
+	
+	
+	#tab2 td{
+		width : 100px;
+		text-align: center;
+	}
+	
+	#tr1{
+		font-weight: bold;
+	}
+	
+	#tab2 #info{ 
+		width : 500px;
+	}
+	
+	#tab2 .info{ 
+		text-align: left;
+	}
+	
+    <!--클래스는 #대신 .을 사용한다 -->
+
+</style>
+
+
+</head>
+<body>
+<table border="1">
+	<tr>
+		<td colspan="2"></td>
+		<td colspan="2"></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td colspan="4"></td>
+		<td colspan="2"></td>
+	</tr>
+	
+	<tr>
+		<td colspan="4"></td>
+		<td colspan="2" rowspan="2"></td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+
+<table id="tab2" border="1">
+	<tr>
+		<td colspan="5"><strong>평생교육원 강좌 소개 = 2020년도 1학기</strong></td>
+	</tr>
+
+	<tr id="tr1">
+		<td>강좌이름</td>
+		<td>강의자</td>
+		<td>소개</td>
+		<td>강좌코드</td>
+		<td>실습비</td>
+	</tr>
+	
+	<tr>
+		<td>뎃생과 유화</td>
+		<td>김철수</td>
+		<td id="info" class="info">??</td>
+		<td>H27</td>
+		<td>100000원</td>
+	</tr>
+		
+	<tr>
+		<td>바이올린</td>
+		<td>홍길동</td>
+		<td class="info">??</td>
+		<td>H28</td>
+		<td>200,000우</td>
+	</tr>
+		
+	<tr>
+		<td>성악아카데미</td>
+		<td>김호성</td>
+		<td class="info">??</td>
+		<td>H30</td>
+		<td>300,000원</td>
+	</tr>
+
+
+</table>
+
+
+
+</body>
+</html>

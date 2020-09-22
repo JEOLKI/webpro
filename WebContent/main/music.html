@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+
+<style type="text/css">
+	div{
+		float: left;
+		border-top: 3px dashed white;
+		border-bottom: 3px solid white;
+		margin: 5px;
+		width: calc(33% - 2%);
+		box-sizing: border-box;
+		height: 540px;
+		overflow: auto;
+		padding: 13px;
+		background-color: none;
+	}
+	
+	div::-webkit-scrollbar {
+    	width: 10px;
+  	}
+  	div::-webkit-scrollbar-thumb {
+    	background-color: grey;
+    	border-radius: 10px;
+    	background-clip: padding-box;
+    	border: 2px solid transparent;
+ 	}
+  	div::-webkit-scrollbar-track {
+    	background-color: white;
+    	border-radius: 10px;
+    	box-shadow: inset 0px 0px 5px white;
+	}
+	
+	img{
+		width: 280px;
+		height: 280px;
+		margin: 5px;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div>
+		<img alt="음악1" src="../images/음악1.jpg">
+		<p>'JYP 5인조 신인 걸그룹'ITZY,타이틀곡 '달라달라' 발매!</p>
+		<audio src="../multi/old_pop.mp3" controls>
+		</audio>
+		<br><br>
+		<input type="button" value="쇼핑카트에 추가하기">
+	</div>
+
+	<div>
+		<img alt="앤마리" src="../images/Anne-Marie(앤마리)-2002.jpg">
+		<p>Anne Marie(앤마리)-2002 <br> Anne Marie~~!! </p>
+		<audio src="../multi/old_pop.mp3"controls>
+		</audio>
+		<br><br>
+		<input type="button" value="쇼핑카트에 추가하기">
+	</div>
+
+	<div>
+		<img alt="소우주" src="../images/소우주.jpg">
+		<p>소우주(Mikrokosmos) 방탄소년단 </p>
+		<audio src="../multi/old_pop.mp3" controls>
+		</audio>
+		<br><br>
+		<input type="button" value="쇼핑카트에 추가하기">
+	</div>
+
+</body>
+</html>

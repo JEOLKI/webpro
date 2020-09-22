@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+
+	div {
+		width: 50%;
+		height: 100px;
+		background: deepskyblue;
+		padding: 20px;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+	function calc() {
+		x = prompt("첫번째 정수로 입력하세요");
+		cal = prompt("연산자를 입력하세요");
+		y = prompt("두번째 정수로 입력하세요");
+		
+		x = parseInt(x);
+		y = parseInt(y);
+		
+		/*
+		if(cal == '+'){ // " " ' ' 구분하지 않는다
+			result = x + y;
+		} else if (cal == "-") {
+			result = x - y;
+		} else if (cal == "*") {
+			result = x*y;
+		} else if (cal =="/") {
+			result = x/y;
+		}
+		*/
+		
+		switch (cal) {
+		case '+':
+			result = x + y;
+			break;
+		case '-':
+			result = x - y;
+			break;
+		case '*':
+			result = x * y;
+			break;
+		case '/':
+			result = x / y;
+			break;
+		}
+		
+		document.getElementById('out').innerHTML = x + " " + cal + " " + y + " = " + result;
+		
+	}
+
+</script>
+
+
+</head>
+<body>
+<pre>
+
+	두개의 수를 prompt로 입력 받는다.
+	한개의 연산자를 prompt로 입력받는다.
+	
+	연산자를 비교해서 (if/ switch) 연산을  수행한다.
+	결과값을 div에 출력한다.
+
+</pre>
+	<input type="button" value="확인" onclick="calc()">
+	<br><br>
+	<div id="out"></div>
+
+
+</body>
+</html>

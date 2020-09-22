@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WEB SHOP</title>
+<link rel="stylesheet" href="../css/public.css">
+<style type="text/css">
+	body{
+		min-width: 1000px;
+	}
+	
+	header, aside, section, article, footer{
+		box-sizing: border-box;
+		border-radius : 50px;
+		margin: 5px;
+	}
+
+	header{
+		background: linear-gradient(#DAD9FF, #D9E5FF);
+		height: 100px;
+		border-radius: 5px; 
+		padding-top: 3px;
+		letter-spacing: 10px;
+		font-size: 1.2em;
+	}
+	
+	header img{
+		width: 50px;
+		height: 50px;
+		float: left;
+		margin: 5px;
+		margin-left: 40%;
+	}
+
+	nav{
+		text-align: center;
+		border-top: 2px dashed #4641D9;
+		border-bottom: 2px solid #4641D9;
+		padding: 10px;
+		min-width: 1500px;
+	}
+	
+	li{
+		display : inline;
+		margin: 50px;
+		padding: 10px;
+		letter-spacing: 10px;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: #030066;
+	}
+	
+	#left{
+		width : calc(15% - 1%);
+		height : 600px;
+		background: linear-gradient(#D9E5FF, #D4F4FA);
+		float : left;
+		border-radius: 5px;
+		padding: 10px;
+	}
+	
+	section{
+		width : calc(66% - 1%);
+		height : 600px;
+		background: linear-gradient(#D9E5FF, #D4F4FA);
+		float : left;
+		border-radius: 5px; 
+		margin-left: 0px;
+	
+	}
+	
+	#right{
+		width : calc(18% - 1%);
+		height : 600px;
+		background: linear-gradient(#D9E5FF, #D4F4FA);
+		float : right;
+		margin-left: 0px;
+		border-radius: 5px; 
+		padding: 10px;
+	
+	}
+	
+	footer{
+		height: 100px;
+		background: linear-gradient(#6799FF, #6B66FF);
+		clear : both;
+		border-radius: 5px 5px 50px 50px ;
+		color: white;
+		text-align: center;
+		font-size: 1.5em;
+		padding-top: 30px;
+	}
+	
+	header a:Link, header a:visited{
+ 		color : #030066;
+ 		text-decoration: none;
+ 	}
+ 	
+ 	#left a:Link, header a:visited{
+ 		font-weight: bold;
+ 		color : #002266;
+ 		text-decoration: none;
+ 	}
+ 	
+ 	#leftdiv{
+ 		background: #FFFFFF;
+ 		padding: 10px;
+ 		border-radius: 10px; 
+ 	}
+ 	
+ 	iframe{
+ 		margin-left: 21px;
+ 		width : 99%;
+ 		height: 600px;
+ 		border: none;
+ 	}
+ 	
+ 	fieldset{
+ 		border: none;
+ 	}
+ 	
+ 	.input1{
+ 		width: 95%;
+ 	}
+
+</style>
+
+
+</head>
+<body>
+
+ 
+	<header>
+        <h1>
+        	<img alt="쇼핑백.jpg" src="../images/쇼핑백.jpg">
+            <a href="main.html">WEB SHOP</a>
+       </h1>
+    </header>
+   
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT US</li>
+            <li>NEWS</li>
+            <li>MY ACOUNT</li>
+            <li>CONTANTS</li>
+        </ul>
+    </nav>
+    
+    <aside id="left">
+    	<h2>카테고리</h2>
+        <div id="leftdiv">
+        <a href="computer.html" target="ifr">컴퓨터</a> <hr>
+        <a href="clothing.html" target="ifr">의류</a> <hr>
+        <a href="music.html" target="ifr">음악</a> <hr>
+        <a href="movie.html" target="ifr">영화</a> <hr>
+        <a href="sports.html" target="ifr">스포츠/레저</a> <hr>
+        <a href="furniture.html" target="ifr">가구/인테리어</a> <hr>
+        <a href="food.html" target="ifr">식품</a>
+        </div>
+    </aside>
+   
+   
+    <section id="main">
+        <article id="article1">
+        
+        <iframe src="computer.html" name="ifr"> </iframe>
+        
+        </article>
+    </section>
+   
+   
+    <aside id="right">
+        <div id="shopcart">
+        	<h2>Shopping Cart</h2>
+        	<p>현재 쇼핑카트에 물품이 없습니다.</p>
+        	<a href="shopcart.html"  target="ifr">쇼핑카드 보기</a>
+        
+        </div>
+		<br><br>
+		<div id="login">
+		
+			<h2>Log In</h2>
+
+			<form action="main.html" method="post">
+				<fieldset>
+					<label>아이디</label> 
+					<br>
+					<input type="text" name="name" class="input1">
+					<br> 
+					<label>패스워드</label> 
+					<br>
+					<input type="text" name="pass" class="input1">
+					<br> <br>
+				    <input type="submit" value="로그인">
+				    <input type="reset" value="초기화"><br>
+				
+					<a href="register.html"  target="ifr">회원가입</a>
+					<a href="">비밀번호 분실</a>
+				</fieldset>
+			</form>
+
+		</div>
+		
+	</aside>
+   
+	<footer>
+	Copyright (c) 2020 WEB SHOP
+	</footer>
+
+
+
+
+
+
+</body>
+</html>

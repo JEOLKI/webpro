@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<style type="text/css">
+	#img1 {
+		width: 100px;
+		height: 100px;	
+	}
+	
+	#end{
+		display: none;
+	}
+	
+	td {
+		width: 400px;
+		height: 50px;
+	}
+	
+	#imgtd{
+		height: 200px;
+	}
+	
+	table {
+		border: 1px solid white;
+		border-collapse: collapse; 
+		background-color: white;
+		text-align: center;
+	}
+	
+	#rpsHuman, #rpsCom{
+		width: 400px;
+		height: 200px;
+	}
+
+	#human{
+		background-color: #FFE08C;
+	}
+	
+	#computer{
+		background-color: #FFA7A7;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+	arr = ["국화.jpg", "단풍.jpg", "꽃.jpg", "등대.jpg", "사막.jpg", "사자.jpg", "산.png", "수국.jpg"]
+	
+	window.onload = function() {
+		// 아이디가 start인 버튼 요소 검색
+		start = document.querySelector('#start')
+		
+		// 아이디가 end인 버튼 요소 검색
+		end = document.querySelector('#end')		
+	}
+	
+	function proc1() {
+		
+		//확인버튼 사라지고
+		start.style.display = "none";
+		//종료버튼 나타난다
+		end.style.display = "inline";
+		
+		a = setInterval(function(){
+			
+			//랜덤발생
+			ran = Math.floor(Math.random()*arr.length);
+			
+			//이미지선택
+			img = arr[ran];
+			
+			//#img1인 요소의 src를 변경
+			document.getElementById('img1').src = "../images/"+img;
+			
+		}, 1000);
+	}
+	
+	function proc2() {
+		
+		//setInterval 종료
+		clearInterval(a);
+		
+		//확인버튼 나타나고
+		start.style.display = "inline";
+
+		//종료버튼 사라진다
+		end.style.display = "none";
+	}
+
+	//humanArr = ["가위_좌.png", "바위_좌.png", "보_좌.png"];
+	comArr = ["가위_우.png", "바위_우.png", "보_우.png"];
+	
+	function gameStart() {
+		
+		humanInput = prompt("가위 바위 보를 입력하세요");
+		
+		ran = Math.floor(Math.random()*comArr.length);
+		
+		rpscom = comArr[ran];
+		document.getElementById('rpsCom').src = "../images/"+rpscom;
+		
+		document.getElementById('rpsHuman').src = "../images/"+ humanInput + "_좌.png";
+		
+		rpsResult = document.getElementById('rpsResult');
+		
+		if (humanInput == "가위" && ran == 1 
+				|| humanInput == "보" && ran == 0 
+				|| humanInput == "바위" && ran == 2 ) {
+			rpsResult.innerHTML = "컴퓨터가 이겼습니다."
+		} else if (humanInput == "가위" && ran == 2 
+				|| humanInput == "보" && ran == 1 
+				|| humanInput == "바위" && ran == 0 ) {
+			rpsResult.innerHTML = "니가 이겼습니다."
+		} else {
+			rpsResult.innerHTML = "비겼습니다."
+		}
+				
+	}
+	
+	
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 이미지변경  </h3>
+		버튼을 클릭하면 1초간격으로 이미지를 변경 <br>
+		이미지 배열을 이용 <br>
+		랜덤을 이용해서 이미지를 선택한다 
+		<br><br>
+		<input id="start" type="button" value="확  인" onclick="proc1()">
+		<input id="end" type="button" value="종 료" onclick="proc2()">
+		<br><br>
+		<div id="result1">
+		
+		<img alt="이미지1" src="../images/대나무숲.jpg" id="img1">
+		</div>
+	</div>
+	
+	<div class="box">
+		<h3>2. 가위바위보</h3>
+		컴퓨터는 랜덤으로 결정 <br>
+		사용자는 입력한다. <br>
+		가위바위보에 해당하는 이미지를 변경한다
+		<br><br>
+		
+		<table border="1">
+			<tr>
+				<td colspan="2"><input id="gamestart" type="button" value="게임시작" onclick="gameStart()"></td>
+			</tr>
+			<tr>
+				<td id="human">사람</td>
+				<td id="computer">컴퓨터</td>
+			</tr>
+			<tr>
+				<td id="imgtd"><img alt="가위바위보" src="../images/가위_좌.png" id="rpsHuman"></td>
+				<td id="imgtd"><img alt="가위바위보" src="../images/가위_우.png" id="rpsCom"></td>
+			</tr>
+			<tr>
+				<td colspan="2" id="rpsResult"></td>
+			</tr>
+		
+		</table>		
+		
+		
+	</div>
+	
+	
+</body>
+</html>

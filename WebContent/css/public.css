@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+pre{
+	background : #DAD9FF;
+	border : 5px dashed blue;
+	font-size : 1.3em;
+	padding: 10px;
+}
+
+.box{
+	background: linear-gradient(-90deg, #FFD8D8, #FAF4C0, #FAECC5);
+	height: auto;
+	margin-top: 10px;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+.box div{
+	border: 1px dotted orange;
+	padding: 20px;
+	height: auto;
+	margin: 10px 5px;
+	border-radius: 30px;
+}
+
+.box input[type=button]{
+	 background: #F6F6F6;
+	 width: 100px;
+	 font-weight: bold;
+	 padding: 10px 5px;
+	 border-radius: 20px;
+}

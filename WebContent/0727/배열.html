@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+	function proc1() {
+		f = ["사과", 100, "참외", 200, "복숭아", "포도"];
+		// 앞에 var let등을 붙이면 지역변수 이기때문에 print()에서 사용할 수 없다. 
+		// 안붙이면 전역변수이다.
+		
+		print('#result1');
+	}
+	
+	function proc2() {
+		f = new Array("사과", "바나나", "참외", "수박", "복숭아", "포도");
+		
+		print('#result2');
+	}
+	
+	function proc3() {
+		f = new Array();
+		
+		f[0] = "사과";
+		f[1] = "바나나";
+		f[2] = 123.456;
+		f[3] = 100;
+		
+		print('#result3');
+	}
+
+	function print(out) {
+		res = "";
+		
+// 		for (var i = 0; i < f.length; i++) {
+// 			res += f[i] + "<br>"; 
+// 		}
+
+		for(x in f){
+			res += f[x] + "<br>";
+		}
+		
+		document.querySelector(out).innerHTML = res;
+	}
+
+</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<h3>1. 배열-리터럴 생성</h3>
+		f = ["사과", 100, "참외", 200, "복숭아", "포도"]<br><br>
+		<input type="button" value="확  인" onclick="proc1()">
+		<br><br>
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<h3>2. 배열-생성자 생성</h3>
+		f = new Array("사과", "바나나", "참외", "수박", "복숭아", "포도")<br><br>
+		<input type="button" value="확  인" onclick="proc2()">
+		<br><br>
+		<div id="result2"></div>
+	</div>
+
+	<div class="box">
+		<h3>2. 배열-생성자 default</h3>
+		f = new Array()<br><br>
+		<input type="button" value="확  인" onclick="proc3()">
+		<br><br>
+		<div id="result3"></div>
+	</div>
+</body>
+</html>
